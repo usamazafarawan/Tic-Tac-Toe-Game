@@ -1,0 +1,75 @@
+.main-container{
+  width: 100%;
+  height: 850px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  .container{
+    width: 50%;
+    height: 90%;
+  }
+}
+.status {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.winner {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.board{
+  margin-top: 60px;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  font-size: 24px;
+  border-radius: 20px;
+  border: 2px solid #333;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.square.x {
+  color: #333;
+  font-size: 150px;
+}
+
+.square.o {
+  color: green;
+  font-size: 150px;
+
+}
+
+.square:hover {
+  background-color: #eee;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

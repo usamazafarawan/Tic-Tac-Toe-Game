@@ -1,0 +1,18 @@
+<div class="main-container">
+    <div class="container">
+<div id="statusArea" class="status" *ngIf="!(winner==='None')">Next player: <span>{{ currentPlayer }}</span></div>
+<div id="winnerArea" class="winner">Winner: <span>{{ winner }}</span></div>
+<button (click)="resetGame()">Reset</button>
+
+<section class="board">
+  <div class="row" *ngFor="let row of [0, 1, 2]">
+    <button *ngFor="let col of [0, 1, 2]" class="square"
+      [class.x]="board[row][col] === 'X'"
+      [class.o]="board[row][col] === 'O'"
+      [disabled]="board[row][col] !== '' || winner"
+      (click)="makeMove(row, col)"
+    >{{ board[row][col] }}</button>
+  </div>
+</section>
+</div>
+</div>
